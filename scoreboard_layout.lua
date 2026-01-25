@@ -323,7 +323,7 @@ do -- player portrait
         local portraitTexture = frame.Portrait:GetTexture()
         frame.Portrait:SetTexCoord(0, 0, 0, 1, 1, 0, 1, 1)
         if (not portraitTexture) then
-            local class = playerData.class
+            local class = playerData.class or {r = 1, g = 1, b = 1, a = 1}
             frame.Portrait:SetTexture("Interface\\TargetingFrame\\UI-Classes-Circles")
             frame.Portrait:SetTexCoord(unpack(CLASS_ICON_TCOORDS[class]))
         end
